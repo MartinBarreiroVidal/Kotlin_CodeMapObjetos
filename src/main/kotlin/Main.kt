@@ -1,11 +1,13 @@
 package example.myapp
 
+import example.myapp.decor.Decoration
+
 fun buildAcuario() {
     // 1. Valores por defecto
     val acuario1 = Acuario()
     acuario1.printSize()
 
-    // 2. Ancho personalizado
+    // 2. Ancho personalizado, creacion de objeto despues de =, sin new.
     val acuario2 = Acuario(width = 25)
     acuario2.printSize()
 
@@ -24,4 +26,18 @@ fun buildAcuario() {
 
 fun main() {
     buildAcuario()
+    makeDecorations()
+}
+fun makeDecorations() {
+    val decoration1 = Decoration("granite")
+    println(decoration1)
+
+    val decoration2 = Decoration("slate")
+    println(decoration2)
+
+    val decoration3 = Decoration("slate")
+    println(decoration3)
+
+    println (decoration1.equals(decoration2))
+    println (decoration3.equals(decoration2))
 }

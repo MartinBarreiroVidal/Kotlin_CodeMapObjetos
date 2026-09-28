@@ -1,6 +1,7 @@
 package example.myapp
 
 import example.myapp.decor.Decoration
+import example.myapp.decor.Decoration2
 
 fun buildAcuario() {
     // 1. Valores por defecto
@@ -40,4 +41,11 @@ fun makeDecorations() {
 
     println (decoration1.equals(decoration2))
     println (decoration3.equals(decoration2))
+
+    val d5 = Decoration2(rocks = "crystal", wood = "wood", diver = "diver")
+    println(d5)
+    val (rock, wood, diver) = d5
+    println(rock)
+    println(wood)
+    println(diver)
 }
